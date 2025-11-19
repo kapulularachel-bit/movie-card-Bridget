@@ -1,4 +1,4 @@
-export const dataFile = 
+export const DataFile = 
     {
        page: 1,
        results: [
@@ -11,7 +11,7 @@ export const dataFile =
             original_title: "Sample Movie Title",
             overview: "This is a sample overview of the movie. It provides a brief description of the plot and key elements.",
             popularity: 150.123,    
-            poster_path: './srs/movieCard/card(1).jpg',
+            poster_path: './src/movieCard/card(1).jpg',
             release_date: "2023-10-15",
             title: "Sample Movie Title",
             video: false,
@@ -27,7 +27,7 @@ export const dataFile =
             original_title: "Sample Movie Title",
             overview: "This is a sample overview of the movie. It provides a brief description of the plot and key elements.",
             popularity: 150.123,    
-            poster_path: './srs/movieCard/card(3).jpg',
+            poster_path: './src/movieCard/card(3).jpg',
             release_date: "2023-10-15",
             title: "Sample Movie Title",
             video: false,
@@ -43,7 +43,7 @@ export const dataFile =
             original_title: "Sample Movie Title",
             overview: "This is a sample overview of the movie. It provides a brief description of the plot and key elements.",
             popularity: 150.123,    
-            poster_path: './srs/movieCard/card(1).jpg',
+            poster_path: './src/movieCard/card(1).jpg',
             release_date: "2023-10-15",
             title: "Sample Movie Title",
             video: false,
@@ -59,7 +59,7 @@ export const dataFile =
             original_title: "Sample Movie Title",
             overview: "This is a sample overview of the movie. It provides a brief description of the plot and key elements.",
             popularity: 150.123,    
-            poster_path:'./srs/movieCard/card(2).jpg',
+            poster_path:'./src/movieCard/card(2).jpg',
             release_date: "2023-10-15",
             title: "Sample Movie Title",
             video: false,

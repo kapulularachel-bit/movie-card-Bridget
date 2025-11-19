@@ -5,11 +5,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions'
-export default function MovieCard({movie}){
 
+export default function MovieCard({movie}){
     const releaseTime = movie.release_date.split("-")[0]; //geting a year from the release date
     const movieOverview = movie.overview.length > 150 ? movie.overview.substring(0, 150) + "..." : movie.overview;
-
     return(
         <Card sx={{ maxWidth: 345 }}>
               <CardActionArea>
