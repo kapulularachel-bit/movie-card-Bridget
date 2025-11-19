@@ -1,34 +1,13 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import { Link as RouterLink } from 'react-router-dom';
-import {Routes, Route} from 'react-router-dom';
-import MovieCardPage from './pages/MovieCardPage';
-import HomePage from './pages/HomePge';
 import NavBar from './components/NavBar';
-
-
-const preventDefault = (event) => event.preventDefault();
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePge';
+import MovieCardPage from './pages/MovieCardPage';
+import './App.css';
 
 export default function App() {
   return (
     <>
       <NavBar />
-      <Box
-        sx={{
-          typography: 'body1',
-          '& > :not(style) ~ :not(style)': {
-            ml: 2,
-          },
-          p: 2,
-        }}
-        onClick={preventDefault}
-      >
-        <RouterLink to="/">Home</RouterLink> | {" "}
-        <RouterLink to="/MovieCardPages">
-          Movie Cards
-        </RouterLink>
-      </Box>
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/MovieCardPages" element={<MovieCardPage />} />
