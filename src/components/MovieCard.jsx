@@ -7,8 +7,10 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions'
 
 export default function MovieCard({movie}){
-    const releaseTime = movie.release_date.split("-")[0]; //geting a year from the release date
-    const movieOverview = movie.overview.length > 150 ? movie.overview.substring(0, 150) + "..." : movie.overview;
+    if (!movie) return null;
+    
+    const releaseTime = movie.release_date ? movie.release_date.split("-")[0] : "N/A";
+    const movieOverview = movie.overview && movie.overview.length > 150 ? movie.overview.substring(0, 150) + "..." : movie.overview || "No overview available";
     return(
         <Card sx={{ maxWidth: 345 }}>
               <CardActionArea>

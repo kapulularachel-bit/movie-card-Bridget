@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import { Link as RouterLink } from 'react-router-dom';
 import './NavBar.css';
 
-const preventDefault = (event) => event.preventDefault();
-
 export default function NavBar() {
   return (
     <nav className="navbar">
@@ -12,16 +10,13 @@ export default function NavBar() {
       <div className="nav-links">
         <Box
           sx={{
-            typography: 'body1',
-            '& > :not(style) ~ :not(style)': {
-              ml: 2,
-            },
-            p: 2,
+            display: 'flex',
+            gap: '2rem',
+            alignItems: 'center',
           }}
-          onClick={preventDefault}
         >
-          <RouterLink to="/">Home</RouterLink> | {" "}
-          <RouterLink to="/MovieCardPages">Movie Cards</RouterLink>
+          <RouterLink to="/" className="nav-link">Home</RouterLink>
+          <RouterLink to="/MovieCardPages" className="nav-link">Movie Cards</RouterLink>
         </Box>
       </div>
     </nav>
