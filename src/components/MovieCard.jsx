@@ -14,22 +14,23 @@ export default function MovieCard({movie}){
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="140"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
+                  height="300"
+                  image={movie.poster_path}
+                  alt={movie.title}
                 />
                 <CardContent>
-                    <img
-                      src = {movie.poster_path}
-                      alt = {movie.title}  
-                      style = {{width: '100px', height: '150px', borderRadius: '8px'}}  
-                    />
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>         
-                      <h3>{movie.title}</h3>
-                      <p><strong>Year</strong> {releaseTime}</p>
-                      <p><strong>Popularity</strong> {movie.popularity}</p>
-                      <p> {movieOverview}</p>
-                    </Typography>
+                  <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: 1 }}>         
+                      {movie.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', marginBottom: 1 }}>         
+                      <strong>Year:</strong> {releaseTime}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', marginBottom: 1 }}>
+                      <strong>Popularity:</strong> {movie.popularity}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {movieOverview}
+                  </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>

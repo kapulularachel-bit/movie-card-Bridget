@@ -1,13 +1,15 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import {Routes, Route} from 'react-router';
+import { Link as RouterLink } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import MovieCardPage from './pages/MovieCardPage';
+import HomePage from './pages/HomePge';
 
 const preventDefault = (event) => event.preventDefault();
 export default function Links() {
   return (
-    <Box
+    <>
+          <Box
       sx={{
         typography: 'body1',
         '& > :not(style) ~ :not(style)': {
@@ -16,15 +18,18 @@ export default function Links() {
       }}
       onClick={preventDefault}
     >
-      <Link to ="/">Home</Link> | {" "}
-      <Link to ="/MovieCardPages">
+      <RouterLink to ="/HomePage">Home</RouterLink> | {" "}
+      <RouterLink to ="/MovieCardPages">
         Movie Cards
-      </Link>
+      </RouterLink>
 
       <Routes>
-        <Route path = "/" element = {<h1>Home Page</h1>} />
+        <Route path = "/HomePage" element = {<HomePage/>} />
+        <Route path = "/" element = {<HomePage/>} />
         <Route path = "/MovieCardPages" element = {<MovieCardPage />} />
       </Routes>
     </Box>
+    </>
+
   );
 }
