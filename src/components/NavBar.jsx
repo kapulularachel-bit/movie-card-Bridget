@@ -1,5 +1,5 @@
 
-// import './NavBar.css';
+import './NavBar.css';
 
 export default function NavBar() {
   const scrollToSection = (id) => {
