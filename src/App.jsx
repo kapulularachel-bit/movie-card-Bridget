@@ -5,7 +5,7 @@ import {Routes, Route} from 'react-router-dom';
 import MovieCardPage from './pages/MovieCardPage';
 import HomePage from './pages/HomePge';
 import NavBar from './components/NavBar';
-import '../components/NavBar.css';
+
 
 const preventDefault = (event) => event.preventDefault();
 
